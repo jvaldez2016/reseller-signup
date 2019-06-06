@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return redirect('/userDetail');
     }
+
+    public function show()
+    {
+        return view('home');
+    }
 }

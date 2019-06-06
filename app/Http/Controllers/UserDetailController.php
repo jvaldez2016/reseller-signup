@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\UserDetail;
 use Illuminate\Http\Request;
-
+use Auth;
 class UserDetailController extends Controller
 {
     public function __construct()
@@ -40,7 +40,23 @@ class UserDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        UserDetail::create([
+            'first_name' => $request->firstname,
+            'middle_name' => $request->middlename,
+            'last_name' => $request->lastname,
+            'birth_date' => $request->birthdate,
+            'land_line_number' => $request->landline,
+            'mobile_number' => $request->mobile,
+            'home_address' =>$request->home_adress,
+            'shipping_address' => $request->shipping_adress,
+            'facebook_name' =>$request->facebook_name,
+            'facebook_url' => $request->facebook_url,
+            'instagram_account' => $request->instagram,
+            'user_id' => Auth::id()
+        ]);
+        return redirect('/businessDetail');
     }
 
     /**
