@@ -56,7 +56,7 @@ class UserDetailController extends Controller
             'instagram_account' => $request->instagram,
             'user_id' => Auth::id()
         ]);
-        return redirect('/businessDetail');
+        return redirect('/userBusinessDetail');
     }
 
     /**
