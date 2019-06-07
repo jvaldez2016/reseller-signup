@@ -14,11 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+// user registration
 Route::get('/userDetail','UserDetailController@show')->name('UserDetail');
 Route::post('/userDetail','UserDetailController@store');
 Route::get('/userBusinessDetail','BusinessInformationController@show');
 Route::post('/userBusinessDetail','BusinessInformationController@store');
+
+//items
+Route::get('/registerItem','ItemController@show');
 
 Auth::routes();
 

@@ -162,7 +162,7 @@
                             <div class="form-group">
                             <div class="col-md-12 inputGroupContainer align" align="right">
                                 <div class="input-group ">
-                                <button class="btn btn-primary" type="submit">Continue</button>
+                                <button class="btn btn-primary" type="submit">Complete Registration</button>
                                 </div>
                             </div>
                             </div>
