@@ -14,7 +14,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $result=Item::all();
+        dd($result);
     }
 
     /**
@@ -24,7 +25,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.itemform');
     }
 
     /**
@@ -35,7 +36,16 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Item::create([
+            'name' => $request->name,
+            'category' => $request->category,
+            'suggested_retail_price' => $request->srp,
+            'reseller' => $request->reseller,
+            'distributor' => $request->distributor,
+            'mega_distributor' => $request->mega_distributor
+        ]);
+        return redirect('admin');
     }
 
     /**
@@ -46,7 +56,7 @@ class ItemController extends Controller
      */
     public function show(item $item)
     {
-        //
+
     }
 
     /**
@@ -57,7 +67,7 @@ class ItemController extends Controller
      */
     public function edit(item $item)
     {
-        //
+        // $result
     }
 
     /**

@@ -21,7 +21,11 @@ Route::get('/userBusinessDetail','BusinessInformationController@show');
 Route::post('/userBusinessDetail','BusinessInformationController@store');
 
 //items
-Route::get('/registerItem','ItemController@show');
+Route::get('/all_item','ItemController@index');
+Route::get('/add_item','ItemController@create');
+Route::post('/add_item','ItemController@store');
+Route::get('/add_item{id}','ItemController@edit');
+Route::put('/item/{id}','ItemController@update');
 
 Auth::routes();
 

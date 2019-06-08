@@ -1,12 +1,12 @@
 @font-face {
   font-family: "ElMessiri-SemiBold";
-  src: url("../fonts/el_messiri/ElMessiri-SemiBold.ttf"); }
+  src: url("/css/fonts/el_messiri/ElMessiri-SemiBold.ttf"); }
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("../fonts/montserrat/Montserrat-Regular.ttf"); }
+  src: url("/css/fonts/montserrat/Montserrat-Regular.ttf"); }
 @font-face {
   font-family: "Montserrat-SemiBold";
-  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf"); }
+  src: url("/css/fonts/montserrat/Montserrat-SemiBold.ttf"); }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -43,14 +43,14 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url("../images/bg-registration-form-4.jpg") no-repeat;
+  background: url("/images/bg-registration-form-4.jpg") no-repeat;
   background-size: cover; }
 
 .inner {
   max-width: 850px;
   margin: auto;
   background: #fff;
-  display: flex;
+  /* display: flex; */
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -62,10 +62,11 @@ a {
   padding-right: 15px; }
 
 form {
-  width: 50%;
+  width: 100%;
   padding-top: 77px;
   padding-right: 60px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  padding-bottom: 15px; }
 
 h3 {
   font-size: 35px;

@@ -140,48 +140,26 @@ return [
                     'text' => 'Level One',
                     'url'  => '#',
                 ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
+
             ],
         ],
         'LABELS',
         [
-            'text'       => 'Important',
-            'icon_color' => 'red',
+            'text'       => 'Upload Item Price list',
+            'url'        => '/add_item',
+            'icon_color' => 'green',
         ],
         [
-            'text'       => 'Warning',
+            'text'       => 'Update Price List',
             'icon_color' => 'yellow',
         ],
         [
-            'text'       => 'Information',
+            'text'       => 'Memo',
             'icon_color' => 'aqua',
+        ],
+        [
+            'text'       => 'Beautederm Forms',
+            'icon_color' => 'blue',
         ],
     ],
 
