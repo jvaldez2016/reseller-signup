@@ -24,8 +24,9 @@ Route::post('/userBusinessDetail','BusinessInformationController@store');
 Route::get('/all_item','ItemController@index');
 Route::get('/add_item','ItemController@create');
 Route::post('/add_item','ItemController@store');
-Route::get('/add_item{id}','ItemController@edit');
+Route::get('/add_item/b','ItemController@edit');
 Route::put('/item/{id}','ItemController@update');
+
 
 
 Auth::routes();
@@ -36,3 +37,4 @@ Route::get('/admin','HomeController@show')->name('home');
 
 //clients page after registration
 Route::get('user/page','clientController@index');
+

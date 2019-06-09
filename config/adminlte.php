@@ -151,6 +151,7 @@ return [
         ],
         [
             'text'       => 'Update Price List',
+            'url'        => '/add_item/b',
             'icon_color' => 'yellow',
         ],
         [
