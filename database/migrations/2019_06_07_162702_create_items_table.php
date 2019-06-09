@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('suggested_retail_price');
             $table->string('reseller');
             $table->string('distributor');

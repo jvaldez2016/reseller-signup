@@ -20,11 +20,21 @@ Route::post('/userDetail','UserDetailController@store');
 Route::get('/userBusinessDetail','BusinessInformationController@show');
 Route::post('/userBusinessDetail','BusinessInformationController@store');
 
-//items
-Route::get('/registerItem','ItemController@show');
+//items this route is for admin use only
+Route::get('/all_item','ItemController@index');
+Route::get('/add_item','ItemController@create');
+Route::post('/add_item','ItemController@store');
+Route::get('/add_item/b','ItemController@edit');
+Route::put('/item/{id}','ItemController@update');
+
+
 
 Auth::routes();
 
+//pages
 Route::get('/home', 'HomeController@index');
 Route::get('/admin','HomeController@show')->name('home');
+
+//clients page after registration
+Route::get('user/page','clientController@index');
 

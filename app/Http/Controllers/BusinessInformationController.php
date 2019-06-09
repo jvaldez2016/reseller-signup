@@ -69,7 +69,7 @@ class BusinessInformationController extends Controller
             'shopee_account' =>  $request->shopee_account,
             'user_id' => Auth::id()
         ]);
-        return redirect('/');
+        return redirect('/user/page')->withSuccess('Registration Successful');
     }
 
     /**
