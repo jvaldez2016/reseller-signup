@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <table class="table table-striped">
-        <thead><span><h4>Personal Information</h4></span></thead>
+        <thead><span><h4>Personal Information</h4><@/span></thead>
        <tbody>
           <tr>
              <td colspan="1">
@@ -24,7 +24,7 @@
                         <label class="col-md-4 control-label">Birth Date</label>
                         <div class="col-md-8 inputGroupContainer">
                            <div class="input-group col-md-1"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                              <input id="phoneNumber" name="birthdate" placeholder="mm/dd/yyyy" class="form-control " required="true" value="" type="date">
+                              <input id="" name="birthdate" placeholder="mm/dd/yyyy" class="form-control " required="true" value="" type="date">
                            </div>
                         </div>
                      </div>
@@ -32,7 +32,7 @@
                         <label class="col-md-4 control-label">LandLine</label>
                         <div class="col-md-8 inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                              <input id="phoneNumber" name="landline" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
+                              <input id="" name="landline" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
                            </div>
                         </div>
                      </div>
@@ -40,7 +40,7 @@
                         <label class="col-md-4 control-label">Mobile Number</label>
                         <div class="col-md-8 inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                              <input id="phoneNumber" name="mobile" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
+                              <input id="" name="mobile" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
                            </div>
                         </div>
                      </div>
@@ -48,7 +48,7 @@
                         <label class="col-md-4 control-label">Home Address</label>
                         <div class="col-md-8 inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                             <input id="addressLine2" name="home_adress" placeholder="Address Line 2" class="form-control" required="true" value="" type="text">
+                             <input id="addressLine1" name="home_adress" placeholder="Address Line 2" class="form-control" required="true" value="" type="text">
                           </div>
                         </div>
                      </div>
@@ -74,7 +74,7 @@
                         <label class="col-md-4 control-label">InstaGram Account</label>
                         <div class="col-md-8 inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                               <input id="postcode" name="instagram" placeholder="IG Account" class="form-control" required="true" value="" type="text">
+                               <input id="" name="instagram" placeholder="IG Account" class="form-control" required="true" value="" type="text">
                            </div>
                         </div>
                      </div>

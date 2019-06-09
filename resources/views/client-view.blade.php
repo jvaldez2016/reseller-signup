@@ -9,7 +9,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            {{-- @guest
+            @guest
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">Sign Up</a>
@@ -18,7 +18,7 @@
               <a class="nav-link" href="#">Log In</a>
             </li>
           </ul>
-          @endguest --}}
+          @endguest
           @auth
           <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
