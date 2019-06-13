@@ -42,7 +42,7 @@ class BusinessInformationController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+
         // find user if exist
         $user=businessInformation::where('user_id','=',Auth::id())->first();
         //Validate if exists
