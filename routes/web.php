@@ -38,5 +38,5 @@ Route::get('/admin','HomeController@show')->name('home');
 Route::get('/logout','HomeController@logout');
 
 //clients page after registration
-Route::get('user/page','clientController@index');
+Route::get('user/page','ClientController@index');
 
