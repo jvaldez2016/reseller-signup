@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function show()
     {
-        return view('home');
+        return view('client-view');
     }
 
     public function logout()

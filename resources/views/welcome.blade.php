@@ -45,7 +45,7 @@
         {{-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Make Order ? Click Here</a> --}}
         </div>
         <div>
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">View Current Item Price ? Click Here</a>
+        <a href="/view_pdf" class="btn btn-primary btn-xl rounded-pill mt-5">View Current Item Price ? Click Here</a>
         </div>
         @endauth
         </div>
