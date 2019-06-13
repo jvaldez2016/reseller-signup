@@ -30,10 +30,12 @@ Route::put('/item/{id}','ItemController@update');
 
 
 Auth::routes();
+Route::get('/all_users','HomeController@users');
 
 //pages
 Route::get('/home', 'HomeController@index');
 Route::get('/admin','HomeController@show')->name('home');
+Route::get('/logout','HomeController@logout');
 
 //clients page after registration
 Route::get('user/page','clientController@index');

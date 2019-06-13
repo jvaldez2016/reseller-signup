@@ -40,7 +40,13 @@ class UserDetailController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(auth::id());
+        // validation if user already exist if so, then redirect to welcome/user page
+        // dd(UserDetail::find(3));
+        if (UserDetail::find(Auth::id())) {
+            return redirect('');
 
+        }
 
         UserDetail::create([
             'first_name' => $request->firstname,
@@ -67,6 +73,10 @@ class UserDetailController extends Controller
      */
     public function show(UserDetail $userDetail)
     {
+        if (UserDetail::find(Auth::id())) {
+            return redirect('');
+
+        }
         return view('auth.details');
         // dd('test');
     }

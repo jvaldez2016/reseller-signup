@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'title' => 'Beaute Quest',
+    'title' => 'BeauteDerm',
 
-    'title_prefix' => '',
+    'title_prefix' => 'Admin',
 
     'title_postfix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Beaute</b>Quest',
+    'logo' => '<b>Beaute</b>Derm',
 
     'logo_mini' => '<b>A</b>LT',
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -29,5 +29,20 @@ class HomeController extends Controller
     public function show()
     {
         return view('home');
+    }
+
+    public function logout()
+    {
+
+        $this->middleware('auth');
+        Auth::logout();
+        // dd(Auth::check());
+
+        return redirect('/');
+    }
+    public function users()
+    {
+        $results=Auth::all();
+        return view('auth.show-users')->with($results);
     }
 }
