@@ -14,7 +14,7 @@
                                 <div class="inputGroupContainer col-md-4">
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-calendar"></i></span>
                                         {{-- <input id="phoneNumber" name="product_user_since" placeholder="" class="form-control" required="true" value="" type="date"> --}}
-                                        <p><input name="user_since"type="text" id="datepicker"></p>
+                                        <input type="text" id="month" name="user_since" class="monthPicker" />
 
                                     </div>
                                 </div>
