@@ -36,6 +36,7 @@ Route::get('/all_users','HomeController@users');
 Route::get('/home', 'HomeController@index');
 Route::get('/admin','HomeController@show')->name('home');
 Route::get('/logout','HomeController@logout');
+Route::get('/view_pdf','ItemController@pdf_view');
 
 //clients page after registration
 Route::get('user/page','ClientController@index');

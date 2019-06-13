@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\businessInformation;
 use Illuminate\Http\Request;
 use Auth;
-
+use App\User;
 
 
 class BusinessInformationController extends Controller
@@ -82,8 +82,14 @@ class BusinessInformationController extends Controller
             'instragram_business_account' =>  $request->lazada_account,
             'shopee_account' =>  $request->shopee_account,
             'user_id' => Auth::id(),
-             Auth::user()->completed=> true
+
         ]);
+        $user=User::find(Auth::id());
+        if($user)
+        {
+            $user->completed= true;
+            $user->save();
+        }
         return redirect('/user/page')->withSuccess('Registration Successful');
     }
 
@@ -95,10 +101,13 @@ class BusinessInformationController extends Controller
      */
     public function show(businessInformation $businessInformation)
     {
-        if (businessInformation::find(Auth::id())) {
+         // find user if exist
+         $user=businessInformation::where('user_id','=',Auth::id())->first();
+         //Validate if exists
+        if(isset($user->id)){
             return redirect('');
+         }
 
-        }
         return view('auth.businessinformation');
     }
 

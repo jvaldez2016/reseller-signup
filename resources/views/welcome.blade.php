@@ -38,7 +38,7 @@
       <div class="masthead-content">
         <div class="container">
                 @include('layouts.flash-message')
-          <h2 class="masthead-subheading mb-0">Beaute Quest by: Beautederm</h2>
+          <h2 class="masthead-subheading mb-0">Beautederm</h2>
           <h3 class="">Authorized Mega Distributor</h3>
         @auth
         <div>

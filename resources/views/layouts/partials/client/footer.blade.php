@@ -20,7 +20,8 @@
     $( function() {
       $( "#datepicker" ).datepicker({
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
+        yearRange: '-20:+0'
       });
     } );
     </script>
@@ -33,6 +34,7 @@ $(".monthPicker").datepicker({
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
+        yearRange: '-50:+0',
 
         onClose: function(dateText, inst) {
             var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
