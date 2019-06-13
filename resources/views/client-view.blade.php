@@ -24,7 +24,12 @@
                 <li class="nav-item">
                     <h5 class="nav-link">Welcome {{Auth::user()->name}}</h5>
                 </li>
+                <li class="nav-item">
+                    <h5 class="nav-link"><a href="/logout">Log Out</a></h5>
+                </li>
           </ul>
+
+
 
           @endauth
         </div>
