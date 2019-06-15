@@ -21,7 +21,7 @@
       $( "#datepicker" ).datepicker({
         changeMonth: true,
         changeYear: true,
-        yearRange: '-20:+0'
+        yearRange: '-50:+0'
       });
     } );
     </script>
