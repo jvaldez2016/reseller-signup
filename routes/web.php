@@ -30,11 +30,20 @@ Route::put('/item/{id}','ItemController@update');
 
 
 Auth::routes();
+Route::get('/all_users','HomeController@users');
 
 //pages
 Route::get('/home', 'HomeController@index');
 Route::get('/admin','HomeController@show')->name('home');
+Route::get('/logout','HomeController@logout');
+Route::get('/view_pdf','ItemController@pdf_view');
 
 //clients page after registration
-Route::get('user/page','clientController@index');
+Route::get('user/page','ClientController@index');
 
+/*User Information */
+Route::get('/all_users','UserInfoController@index');
+
+
+/* get data via ajax */
+Route::get('/getuser','UserInfoController@getUserData')->name('ajaxUserData');

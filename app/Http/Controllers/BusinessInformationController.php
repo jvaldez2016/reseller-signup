@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\businessInformation;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
+
+
 class BusinessInformationController extends Controller
 {
     public function __construct()
@@ -39,6 +42,15 @@ class BusinessInformationController extends Controller
      */
     public function store(Request $request)
     {
+
+        // find user if exist
+        $user=businessInformation::where('user_id','=',Auth::id())->first();
+        //Validate if exists
+       if(isset($user->id)){
+           return redirect('');
+
+        }
+
         //set the checkbox "labaled Where do you intend to sell Beautederm?", 1 if true and 0 if false
         $facebook=(isset($request->facebook)? 1:0);
         $instagram=(isset($request->instagram)? 1:0);
@@ -47,8 +59,10 @@ class BusinessInformationController extends Controller
         $personalcontacts=(isset($request->personalcontacts)? 1:0);
         $existingbusiness=(isset($request->existingbusiness)? 1:0);
 
+
+
         businessInformation::create([
-            'product_user_since' => $request->product_user_since,
+            'product_user_since' => $request->user_since,
             'name_of_referrer' =>  $request->name_referrer,
             'existing_business' =>  $request->existing_business,
             'existing_business_address' =>  $request->existing_business_adress,
@@ -67,8 +81,15 @@ class BusinessInformationController extends Controller
             'lazada_account' =>  $request->instagram_business_account,
             'instragram_business_account' =>  $request->lazada_account,
             'shopee_account' =>  $request->shopee_account,
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+
         ]);
+        $user=User::find(Auth::id());
+        if($user)
+        {
+            $user->completed= true;
+            $user->save();
+        }
         return redirect('/user/page')->withSuccess('Registration Successful');
     }
 
@@ -80,6 +101,13 @@ class BusinessInformationController extends Controller
      */
     public function show(businessInformation $businessInformation)
     {
+         // find user if exist
+         $user=businessInformation::where('user_id','=',Auth::id())->first();
+         //Validate if exists
+        if(isset($user->id)){
+            return redirect('');
+         }
+
         return view('auth.businessinformation');
     }
 

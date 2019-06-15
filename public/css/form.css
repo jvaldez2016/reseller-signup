@@ -1,0 +1,10 @@
+#middlename{
+    display: inline-block;
+    width: 30%;
+}
+#labelmiddlename{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-left: 5px;
+}

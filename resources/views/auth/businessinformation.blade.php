@@ -1,4 +1,4 @@
-@extends('layouts.secondForm')
+@extends('layouts.partials.client.main')
 @section('content')
 <div class="container">
     <form class="well form-horizontal" method="post" action="userBusinessDetail">
@@ -6,16 +6,17 @@
             <thead><span><h4>Business Information</h4></span></thead>
             <tbody>
                 <tr>
-                    <td colspan="1">
-
+                    <td >
                         @csrf
-                        <fieldset>
+                        <fieldset class="center">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Beautederm User Since ?</label>
-                                <div class="col-md-2 inputGroupContainer">
-                                <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-calendar"></i></span>
-                                    <input id="fullName" name="product_user_since" placeholder="" class="form-control" required="true" value="" type="date">
-                                </div>
+                                <div class="inputGroupContainer col-md-4">
+                                    <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-calendar"></i></span>
+                                        {{-- <input id="phoneNumber" name="product_user_since" placeholder="" class="form-control" required="true" value="" type="date"> --}}
+                                        <input type="text" id="month" name="user_since" class="monthPicker" />
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -30,7 +31,7 @@
                                 <label class="col-md-4 control-label">Existing Business if any</label>
                                 <div class="col-md-7 inputGroupContainer">
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-home"></i></span>
-                                        <input id="fullName" name="existing_business" placeholder="Name of Business Establishment" class="form-control" required="true" value="" type="text">
+                                        <input id="fullName" name="existing_business" placeholder="Name of Business Establishment" class="form-control"  value="" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -38,23 +39,23 @@
                                 <label class="col-md-4 control-label">Existing Business Address</label>
                                 <div class="col-md-7 inputGroupContainer">
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-home"></i></span>
-                                        <input id="fullName" name="existing_business_adress" placeholder="Business Establishment Address" class="form-control" required="true" value="" type="text">
+                                        <input id="fullName" name="existing_business_adress" placeholder="Business Establishment Address" class="form-control"  value="" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">DTI Number</label>
+                                <label class="col-md-4 control-label">DTI Number :(Optional)</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-pencil"></i></span>
-                                        <input id="fullName" name="dti_number" placeholder="" class="form-control" required="true" value="" type="text">
+                                        <input id="fullName" name="dti_number" placeholder="Optional" class="form-control"  value="" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">TIN Number</label>
+                                <label class="col-md-4 control-label">TIN Number :(Optional)</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-pencil"></i></span>
-                                        <input id="fullName" name="tin_number" placeholder="" class="form-control" required="true" value="" type="text">
+                                        <input id="fullName" name="tin_number" placeholder="Optional" class="form-control"  value="" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +70,7 @@
             <tbody>
                 <tr>
                     <td colspan="1">
-                        <fieldset>
+                        <fieldset class="center">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Where do you intend to sell Beautederm?</label>
                                 <div class="col-md-5 inputGroupContainer ">
@@ -105,55 +106,55 @@
                                     </div>
                                     <div class="input-group">
                                     <label class="">
-                                     Others: <input class="" type="text" value="">
+                                     Others: <input class="" type="text" value="" placeholder="(Optional)">
                                     </label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Business Facebook Account</label>
+                                    <label class="col-md-8 control-label">Business Facebook Account :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
-                                            <input id="fullName" name="facebook_business_account" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="facebook_business_account" placeholder="" class="form-control"  value="" type="text">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Business Facebook Account Url</label>
+                                    <label class="col-md-8 control-label">Business Facebook Account Url  :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                            <input id="fullName" name="facebook_business_url" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="facebook_business_url" placeholder="" class="form-control"  value="" type="text">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Business Instagram Account</label>
+                                    <label class="col-md-8 control-label">Business Instagram Account  :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                            <input id="fullName" name="instagram_business_account" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="instagram_business_account" placeholder="" class="form-control"  value="" type="text">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Lazada Account</label>
+                                    <label class="col-md-8 control-label">Lazada Account  :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                            <input id="fullName" name="lazada_account" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="lazada_account" placeholder="" class="form-control"  value="" type="text">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Shopee Account</label>
+                                    <label class="col-md-8 control-label">Shopee Account  :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                            <input id="fullName" name="shopee_account" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="shopee_account" placeholder="" class="form-control" value="" type="text">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Others</label>
+                                    <label class="col-md-8 control-label">Others  :(if you click the checkbox)</label>
                                     <div class="col-md-4 inputGroupContainer">
                                         <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                            <input id="fullName" name="others" placeholder="" class="form-control" required="true" value="" type="text">
+                                            <input id="fullName" name="others" placeholder="" class="form-control" " value="" type="text">
                                         </div>
                                     </div>
                                 </div>

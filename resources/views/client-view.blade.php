@@ -24,21 +24,31 @@
                 <li class="nav-item">
                     <h5 class="nav-link">Welcome {{Auth::user()->name}}</h5>
                 </li>
+                <li class="nav-item">
+                    <h5 class="nav-link"><a href="/logout">Log Out</a></h5>
+                </li>
           </ul>
+
+
 
           @endauth
         </div>
       </div>
     </nav>
 
-    <header class="masthead text-center text-white">
+    <header class="masthead text-center text-white size1">
       <div class="masthead-content">
         <div class="container">
                 @include('layouts.flash-message')
-          <h2 class="masthead-subheading mb-0">Beaute Quest by: Beautederm</h2>
+          <h2 class="masthead-subheading mb-0">Beautederm</h2>
           <h3 class="">Authorized Mega Distributor</h3>
         @auth
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Make Order ? Click Here</a>
+        <div>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Make Order ? Click Here</a>
+            </div>
+            <div>
+            <a href="/view_pdf" class="btn btn-primary btn-xl rounded-pill mt-5">View Current Item Price ? Click Here</a>
+            </div>
         @endauth
         </div>
       </div>

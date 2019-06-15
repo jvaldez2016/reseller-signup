@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\item;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class ItemController extends Controller
 {
     /**
@@ -12,6 +12,13 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         $result=Item::all();
@@ -91,5 +98,13 @@ class ItemController extends Controller
     public function destroy(item $item)
     {
         //
+    }
+
+    public function pdf_view()
+    {
+
+            $url=storage_path('/app/public/pricelist05152019.pdf');
+            return response()->file($url);
+
     }
 }
