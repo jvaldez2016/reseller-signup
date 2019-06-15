@@ -15,7 +15,6 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Completed</th>
                 <th>Created At</th>
                 <th>Updated At</th>
             </tr>
@@ -29,13 +28,12 @@ $(function() {
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{!! url('/getuser') !!}',
+        ajax: '{!! route('datatables.data') !!}',
         columns: [
-            { data: 'id',id: 'id' },
+            { data: 'id', name: 'id' },
             { data: 'name', name: 'name' },
-            { data: 'email', email: 'email' },
-            { data: 'completed', completed: 'completed' },
-            { data: 'created_at', created_at: 'created_at' },
+            { data: 'email', name: 'email' },
+            { data: 'created_at', name: 'created_at' },
             { data: 'updated_at', name: 'updated_at' }
         ]
     });

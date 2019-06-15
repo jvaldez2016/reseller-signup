@@ -54,14 +54,20 @@
 
 @if(config('adminlte.plugins.datatables'))
     <!-- DataTables with bootstrap 3 renderer -->
-    <script src="//cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script>
+    {{-- <script src="//cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script> --}}
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- DataTables -->
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- App scripts -->
 @endif
 
 @if(config('adminlte.plugins.chartjs'))
     <!-- ChartJS -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
 @endif
-
+@stack('scripts')
 @yield('adminlte_js')
 
 </body>
