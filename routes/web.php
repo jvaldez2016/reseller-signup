@@ -41,3 +41,9 @@ Route::get('/view_pdf','ItemController@pdf_view');
 //clients page after registration
 Route::get('user/page','ClientController@index');
 
+/*User Information */
+Route::get('/all_users','UserInfoController@index');
+
+
+/* get data via ajax */
+Route::get('/getuser','UserInfoController@getUserData')->name('ajaxUserData');
