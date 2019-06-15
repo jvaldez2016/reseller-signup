@@ -12,26 +12,10 @@ class UserInfoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        // $users = User::select([
-        //     'id','name','email','created_at','updated_at'
-        //     ])->get();
-        //     dd($users);
-        //     dd(Datatables::of($users)->toJson());
-        // dd(route('ajaxUserData'));
-        // dd(url('/getuser'));
-        // dd(datatables()->of(User::all())->toJson()
-    // );
     }
     public function getUserData()
     {
-        // $users = User::select([
-        //     'id','name','email','created_at','updated_at'
-        //     ])->get();
-
-        // return Datatables::of($users)->make();
-    // return
     return datatables()->of(User::all())->toJson();
-    // return datatables()->collection(User::all())->toJson();
     }
     /**
      * Display a listing of the resource.
