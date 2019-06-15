@@ -16,6 +16,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Completed</th>
+
                 <th>Created At</th>
                 <th>Updated At</th>
             </tr>
