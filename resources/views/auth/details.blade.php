@@ -17,7 +17,7 @@
                             <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input id="fullName" name="firstname" placeholder="First Name" class="form-control" required="true" value="" type="text">
                                 <input id="middlename" name="middlename" placeholder="Middle Name (Optional)" class="form-control"  value="" type="text">
-                                <input id="fullName" name="lastname" placeholder="Last Name" class="form-control" required="true" value="" type="text">
+                                <input id="lastname" name="lastname" placeholder="Last Name" class="form-control" required="true" value="" type="text">
                             </div>
                          </div>
                       </div>
@@ -96,8 +96,7 @@
        </tbody>
     </table>
  </div>
-<script type="text/javascript">
 
-</script>
 </body>
 @endsection
+
