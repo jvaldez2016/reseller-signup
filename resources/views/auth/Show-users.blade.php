@@ -9,14 +9,13 @@
 
 
 @section('content')
-    <table class="display" id="users-table" width="100%">
+    <table class="row-border hover order-column" id="users-table" width="100%">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Completed</th>
-
+                <th>Finished Registration</th>
                 <th>Created At</th>
                 <th>Updated At</th>
             </tr>
@@ -24,23 +23,8 @@
     </table>
 @endsection
 
-@push('scripts')
-<script>
-$(function() {
-    $('#users-table').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: '{!! url('/getuser') !!}',
-        columns: [
-            { data: 'id',id: 'id' },
-            { data: 'name', name: 'name' },
-            { data: 'email', email: 'email' },
-            { data: 'completed', completed: 'completed' },
-            { data: 'created_at', created_at: 'created_at' },
-            { data: 'updated_at', name: 'updated_at' }
-        ]
-    });
-});
-</script>
-@endpush
+@push('js')
 
+<script src="{{ asset('/js/jquery/table/datatables.js') }}" type="text/javascript"> </script>
+
+@endpush

@@ -1,7 +1,8 @@
 <?php
 
 namespace App;
-
+// use App\userDetail;
+// use App\businessInformation;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,4 +37,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function userDetail()
+    {
+        return $this->hasOne(UserDetail::class);
+    }
+
+    public function userBusinessInformation()
+    {
+        return $this->hasOne(BusinessInformation::class);
+    }
 }
