@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class UserDetail extends Model
@@ -25,4 +25,9 @@ class UserDetail extends Model
         'referrer',
         'user_id'
     ];
+    // protected $table = 'data';
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

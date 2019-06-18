@@ -21,8 +21,10 @@
       $( "#datepicker" ).datepicker({
         changeMonth: true,
         changeYear: true,
-        yearRange: '-50:+0'
-      });
+        yearRange: '-50:+0',
+      }).attr([
+          'autocomplete','off'
+      ]);
     } );
     </script>
 @endif
