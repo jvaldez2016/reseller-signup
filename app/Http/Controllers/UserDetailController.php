@@ -40,9 +40,8 @@ class UserDetailController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(auth::id());
+
         // validation if user already exist if so, then redirect to welcome/user page
-        // dd(UserDetail::find(3));
         if (UserDetail::find(Auth::id())) {
             return redirect('');
 

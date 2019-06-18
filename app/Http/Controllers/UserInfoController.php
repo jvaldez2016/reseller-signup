@@ -12,10 +12,16 @@ class UserInfoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
-    public function getUserData()
+    public function allUsersData()
     {
-    return datatables()->of(User::all())->toJson();
+        // $users=User::all();
+        $users=User::all();
+
+        // dd($user->name);
+        // dd($user->userDetail->first_name);
+    return datatables()->of($users)->toJson();
     }
     /**
      * Display a listing of the resource.
@@ -56,12 +62,24 @@ class UserInfoController extends Controller
      */
     public function show($id)
     {
-        $user= User::find($id);
+        $user=User::find($id);
+        // dd($user);
+        // dd($user->userDetail);
         // dd($user->userDetail->first_name);
-        return view('auth.show-userinfo',compact('user'));
+        // dd($user->userBusinessInformation);
+
+        return view('auth.show-user-details',compact('user'));
 
     }
 
+    public function showUserDetail($id)
+    {
+
+        $user=User::find($id);
+
+
+        return datatables()->of($details)->toJson();
+    }
     /**
      * Show the form for editing the specified resource.
      *
