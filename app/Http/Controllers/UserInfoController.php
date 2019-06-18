@@ -16,11 +16,7 @@ class UserInfoController extends Controller
     }
     public function allUsersData()
     {
-        // $users=User::all();
         $users=User::all();
-
-        // dd($user->name);
-        // dd($user->userDetail->first_name);
     return datatables()->of($users)->toJson();
     }
     /**
@@ -63,13 +59,7 @@ class UserInfoController extends Controller
     public function show($id)
     {
         $user=User::find($id);
-        // dd($user);
-        // dd($user->userDetail);
-        // dd($user->userDetail->first_name);
-        // dd($user->userBusinessInformation);
-
         return view('auth.show-user-details',compact('user'));
-
     }
 
     public function showUserDetail($id)

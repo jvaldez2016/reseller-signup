@@ -39,7 +39,6 @@
             </thead>
             <tbody>
                     <tr>
-
                         <td>{{$user->userDetail->mobile_number}}</td>
                         <td>{{$user->userDetail->facebook_name}}</td>
                         <td>{{$user->userDetail->facebook_url}}</td>
@@ -112,29 +111,9 @@
                     </tr>
                 </tbody>
         </table>
-            {{-- {{$user->userD}} --}}
     </div>
 @endisset
 @empty($user)
     <H1>NO RECORDS YET</H1>
 @endempty
 @endsection
-{{-- @push('scripts')
-<script>
-$(function() {
-    $('#users-table').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: '{!! url('/userdetail/{id}') !!}',
-        columns: [
-
-            { data: 'name', name: 'name' },
-            { data: 'email', name: 'email' },
-            { data: 'created_at', name: 'created_at' },
-            { data: 'updated_at', name: 'updated_at' }
-        ]
-    });
-});
-</script> --}}
-
-{{-- @endpush --}}
