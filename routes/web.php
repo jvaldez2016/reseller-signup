@@ -38,10 +38,13 @@ Route::get('/admin','HomeController@show')->name('home');
 Route::get('/logout','HomeController@logout');
 Route::get('/view_pdf','ItemController@pdf_view');
 
+/** Registered user profile,edit page */
+Route::get('/user/profile','ClientController@show');
+
 //clients page after registration
 Route::get('user/page','ClientController@index');
 
-/*User Information Page */
+/*Admin Information Page */
 Route::get('/all_users','UserInfoController@index');
 ROute::get('/user/{id}','UserInfoController@show');
 

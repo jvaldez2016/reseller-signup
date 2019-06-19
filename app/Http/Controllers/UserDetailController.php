@@ -46,7 +46,18 @@ class UserDetailController extends Controller
             return redirect('');
 
         }
-
+        if (!isset($request->middlename)) {
+            $request->middlename="N/A";
+        }
+        if (!isset($request->facebook_name)) {
+            $request->facebook_name="N/A";
+        }
+        if (!isset($request->facebook_url)) {
+            $request->facebook_name="N/A";
+        }
+        if (!isset($request->instagram)) {
+            $request->facebook_name="N/A";
+        }
         UserDetail::create([
             'first_name' => $request->firstname,
             'middle_name' => $request->middlename,

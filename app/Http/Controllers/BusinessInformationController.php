@@ -59,7 +59,39 @@ class BusinessInformationController extends Controller
         $personalcontacts=(isset($request->personalcontacts)? 1:0);
         $existingbusiness=(isset($request->existingbusiness)? 1:0);
 
-
+        /*** this next line defined if variable are empty will auto set to 'N/A' string **/
+        if(!isset($request->existing_business))
+        {
+            $request->existing_business = 'N/A';
+        }
+        if(!isset($request->existing_business_adress))
+        {
+            $request->existing_business_adress = 'N/A';
+        }
+        if(!isset($request->dti_number))
+        {
+            $request->dti_number = 'N/A';
+        }
+        if(!isset($request->others))
+        {
+            $request->others = 'N/A';
+        }
+        if(!isset($request->facebook_business_account))
+        {
+            $request->facebook_business_account = 'N/A';
+        }
+        if(!isset($request->instagram_business_account))
+        {
+            $request->instagram_business_account = 'N/A';
+        }
+        if(!isset($request->lazada_account))
+        {
+            $request->lazada_account = 'N/A';
+        }
+        if(!isset($request->shopee_account))
+        {
+            $request->shopee_account = 'N/A';
+        }
 
         businessInformation::create([
             'product_user_since' => $request->user_since,
