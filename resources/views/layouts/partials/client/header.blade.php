@@ -22,5 +22,6 @@
     {{-- jquery css for datepicker --}}
   <link rel="stylesheet" href="{!! URL::asset('/css/clientpage/calendar/jquery-ui.css') !!}">
   {{-- <link rel="stylesheet" href="/resources/demos/style.css"> --}}
+
 </head>
 <body>

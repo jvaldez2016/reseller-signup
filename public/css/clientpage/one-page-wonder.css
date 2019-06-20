@@ -173,7 +173,23 @@ header.masthead .bg-circle-4 {
 .inputcenter{
     padding-left: 30%;
 }
-.size1{
+#size1{
+    padding:6%;
 
+    /* height: 120px; */
+}
+table thead tr th{
+    background: #f88379;
+}
+table thead{
+    padding: 2px;
+    background: lightgray;
 
+}
+
+th,td{
+    border:1px solid;
+}
+div button{
+    margin: 10px;
 }

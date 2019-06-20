@@ -40,6 +40,8 @@ Route::get('/view_pdf','ItemController@pdf_view');
 
 /** Registered user profile,edit page */
 Route::get('/user/profile','ClientController@show');
+Route::get('/user/profile/edit','ClientController@edit');
+Route::put('/user/profile/edit/update','ClientController@update');
 
 //clients page after registration
 Route::get('user/page','ClientController@index');

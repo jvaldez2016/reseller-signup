@@ -5,7 +5,7 @@
 @section('title', 'BeauteDerm')
 @section('content')
 @isset($user)
-<div class="">
+<div class="cotainer">
         <table class="table table-striped" id="users-table" width="100%">
             <thead><h2>Personal Information</h2>
                 <tr>

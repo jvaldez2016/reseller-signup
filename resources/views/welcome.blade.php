@@ -22,13 +22,13 @@
           @auth
           <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <h5 class="nav-link">Welcome {{Auth::user()->name}}</h5>
+                    <h5 class="nav-link">Welcome <a href="/user/profile">{{Auth::user()->name}}</a></h5>
+
                 </li>
                 <li class="nav-item">
                     <h5 class="nav-link"><a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}">Log Out</a></h5>
                 </li>
           </ul>
-
           @endauth
         </div>
       </div>
@@ -39,7 +39,7 @@
         <div class="container">
                 @include('layouts.flash-message')
           <h2 class="masthead-subheading mb-0">Beautederm</h2>
-          <h3 class="">Authorized Mega Distributor</h3>
+          {{-- <h3 class="">Authorized Mega Distributor</h3> --}}
         @auth
         <div>
         {{-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Make Order ? Click Here</a> --}}
@@ -50,10 +50,7 @@
         @endauth
         </div>
       </div>
-      {{-- <div class="bg-circle-1 bg-circle"></div> --}}
       <div class="bg-circle-2 bg-circle"></div>
-      {{-- <div class="bg-circle-3 bg-circle"></div> --}}
-      {{-- <div class="bg-circle-4 bg-circle"></div> --}}
     </header>
 
     <section>

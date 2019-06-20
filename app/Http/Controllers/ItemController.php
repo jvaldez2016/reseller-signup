@@ -22,7 +22,7 @@ class ItemController extends Controller
     public function index()
     {
         $result=Item::all();
-        dd($result);
+        return view('views.auth.show-all-items');
     }
 
     /**
@@ -74,6 +74,7 @@ class ItemController extends Controller
      */
     public function edit(item $item)
     {
+
         return view('auth.updateform');
     }
 

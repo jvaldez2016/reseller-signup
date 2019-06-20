@@ -19,7 +19,7 @@
                 <!-- Color Picker -->
                 <div class="form-group">
                     <label>Enter Item Name:</label>
-                    <input name="name" type="text" class="form-control my-colorpicker1">
+                    <input name="name" type="text" value="" class="form-control my-colorpicker1">
                 </div>
                 <div class="form-group">
                         <label>SELECT ITEM CATEGORY</label>
