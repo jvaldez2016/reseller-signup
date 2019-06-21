@@ -38,8 +38,10 @@
     </header>
 
     <section>
-      <div class="container border">
+      <div class="container">
 
+        {{-- Flash Message --}}
+        <div class="container">
             @if ($errors->any())
             <div class="alert alert-danger">
               <ul>
@@ -48,7 +50,12 @@
                   @endforeach
               </ul>
             </div><br />
-      @endif
+             @endif
+             @if ($message = Session::get('success'))
+             @include('layouts.flash-message')
+             @endif
+        </div>
+
           <form action="/user/profile/edit/update" method="POST">
             @csrf
             @method('PUT')

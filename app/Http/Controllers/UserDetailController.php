@@ -44,7 +44,6 @@ class UserDetailController extends Controller
         // validation if user already exist if so, then redirect to welcome/user page
         if (UserDetail::find(Auth::id())) {
             return redirect('');
-
         }
         if (!isset($request->middlename)) {
             $request->middlename="N/A";

@@ -52,7 +52,7 @@
 
     </header>
 
-    <section>
+    <section class="color2">
       <div class="container border">
             <table class="table table-striped" id="users-table" width="100%">
                     <thead>

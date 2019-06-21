@@ -122,7 +122,7 @@ class BusinessInformationController extends Controller
             $user->completed= true;
             $user->save();
         }
-        return redirect('/user/page')->withSuccess('Registration Successful');
+        return redirect('/')->withSuccess('Registration Successful');
     }
 
     /**

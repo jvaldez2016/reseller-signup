@@ -144,7 +144,8 @@ return [
     | of "email". This simply helps us make our message more expressive.
     |
     */
-
+    'alpha_spaces' => 'The :attribute may only contain letters and spaces.',
+    'accepted' => 'The :attribute must be accepted.',
     'attributes' => [],
 
 ];
