@@ -146,6 +146,11 @@ return [
         'LABELS',
 
         [
+            'text'       => 'Items List',
+            'url'        => '/all_items',
+            'icon_color' => 'green',
+        ],
+        [
             'text'       => 'Upload Item Price list',
             'url'        => '/add_item',
             'icon_color' => 'green',

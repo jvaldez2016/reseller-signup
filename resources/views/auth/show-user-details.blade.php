@@ -5,7 +5,7 @@
 @section('title', 'BeauteDerm')
 @section('content')
 @isset($user)
-<div class="cotainer">
+<div class="container-fluid">
         <table class="table table-striped" id="users-table" width="100%">
             <thead><h2>Personal Information</h2>
                 <tr>
@@ -77,7 +77,11 @@
                  <tbody>
                      <tr>
                         <td>{{$user->userBusinessInformation->existing_business}}</td>
-                        <td>{{$user->userBusinessInformation->existing_business_address}}</td>
+                        @if(isset($user->userBusinessInformation->existing_business_address))
+                            <td>{{$user->userBusinessInformation->existing_business_address}}</td>
+                        @else
+                            <td></td>
+                        @endif
                         <td>{{$user->userBusinessInformation->dti_number}}</td>
                         <td>{{$user->userBusinessInformation->tin_number}}</td>
                      </tr>
