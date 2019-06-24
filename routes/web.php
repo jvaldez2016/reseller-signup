@@ -45,9 +45,11 @@ Route::put('/user/profile/edit/update','ClientController@update');
 //clients page after registration
 Route::get('user/page','ClientController@index');
 
-/*Admin Information Page */
+/*Admin USer Information Page */
 Route::get('/all_users','UserInfoController@index');
-ROute::get('/user/{id}','UserInfoController@show');
+Route::get('/user/{id}','UserInfoController@show');
+Route::get('/user/{id}/edit','UserInfoController@edit');
+Route::put('/user/{id}','UserInfoController@update');
 
 
 /* get data via ajax */

@@ -88,7 +88,7 @@ class ClientController extends Controller
     public function update(Request $request)
     {
 
-        // dd($request);
+        dd($request);
         $request->validate([
             /** personal input data */
             'first_name' => 'required|max:255',

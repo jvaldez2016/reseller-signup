@@ -6,8 +6,15 @@
 @section('content')
 @isset($user)
 <div class="container-fluid">
+        <h2 class="">Personal Information</h2>
+        <h4>
+        <a href="/user/{{$user->id}}/edit"><button class="btn btn-primary">Edit</button> </a>
+        </h4>
         <table class="table table-striped" id="users-table" width="100%">
-            <thead><h2>Personal Information</h2>
+            <div class="container d-inline-block" style="displat:inline-flex" >
+
+            </div>
+
                 <tr>
                     <th class="table-border-horizontal">First Name</th>
                     <th class="table-border-horizontal">Middle Name</th>
@@ -16,7 +23,7 @@
                     <th class="table-border-horizontal">Home Address</th>
 
                 </tr>
-            </thead>
+            </>
             <tbody>
                 <tr  class="table-border-horizontal">
                     <td>{{$user->userDetail->first_name}}</td>

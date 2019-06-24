@@ -63,7 +63,7 @@ class UserDetailController extends Controller
             'last_name' => $request->lastname,
             'birth_date' => $request->birthdate,
             'land_line_number' => $request->landline,
-            'mobile_number' => $request->mobile,
+            'mobile_number' => $request->mobile_number,
             'home_address' =>$request->home_adress,
             'shipping_address' => $request->shipping_adress,
             'facebook_name' =>$request->facebook_name,

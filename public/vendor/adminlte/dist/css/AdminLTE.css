@@ -4975,3 +4975,7 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+div.div-inline{
+    /* display: inline-block; */
+    float:right;
+}
