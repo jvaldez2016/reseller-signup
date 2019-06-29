@@ -1,5 +1,5 @@
-@extends('layouts.partials.client.main')
-@section('content')
+@include('layouts.partials.form.head')
+
 <div class="container">
     <form class="well form-horizontal" method="post" action="userBusinessDetail">
         <table class="table table-striped">
@@ -15,7 +15,6 @@
                                     <div class="input-group " ><span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-calendar"></i></span>
                                         {{-- <input id="phoneNumber" name="product_user_since" placeholder="" class="form-control" required="true" value="" type="date"> --}}
                                         <input type="text" id="month" name="user_since" class="monthPicker" />
-
                                     </div>
                                 </div>
                             </div>
@@ -180,4 +179,4 @@
 
 </script>
 </body>
-@endsection
+@include('layouts.partials.client.footer')

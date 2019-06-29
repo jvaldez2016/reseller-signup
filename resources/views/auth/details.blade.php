@@ -1,11 +1,14 @@
 {{-- @extends('adminlte::master') --}}
 {{-- @extends('layouts.secondForm') --}}
-@extends('layouts.partials.client.main')
-@section('content')
+@include('layouts.partials.form.head')
+
+{{-- @section('content') --}}
 <div class="container center">
     <table class="table table-striped">
         <thead><span><h4>Personal Information</h4></span></thead>
+
        <tbody >
+
           <tr>
              <td >
                 <form class="well form-horizontal" method="post" action="userDetail">
@@ -25,8 +28,8 @@
                         <label class=" control-label">Birth Date (MM/DD/YYYY)</label>
                         <div class="col-md- inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                            {{-- <input id="phoneNumber" name="birthdate" placeholder="mm/yyyy" class="form-control " required="true" value="" type="date"> --}}
-                            <p><input name="birthdate"type="text" id="datepicker" autocomplete="off"></p>
+
+                            <input name="birthdate"type="text" id="datepicker" autocomplete="off">
 
                            </div>
                         </div>
@@ -43,7 +46,7 @@
                         <label class="control-label">Mobile Number</label>
                         <div class="inputGroupContainer">
                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                              <input id="phoneNumber" name="mobile" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
+                              <input id="phoneNumber" name="mobile_number" placeholder="Phone Number" class="form-control" required="true" value="" type="text">
                            </div>
                         </div>
                      </div>
@@ -98,5 +101,7 @@
  </div>
 
 </body>
-@endsection
+{{-- @endsection --}}
+
+@include('layouts.partials.client.footer')
 
