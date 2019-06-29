@@ -44,16 +44,26 @@ class UserDetailController extends Controller
         // validation if user already exist if so, then redirect to welcome/user page
         if (UserDetail::find(Auth::id())) {
             return redirect('');
-
         }
-
+        if (!isset($request->middlename)) {
+            $request->middlename="N/A";
+        }
+        if (!isset($request->facebook_name)) {
+            $request->facebook_name="N/A";
+        }
+        if (!isset($request->facebook_url)) {
+            $request->facebook_name="N/A";
+        }
+        if (!isset($request->instagram)) {
+            $request->facebook_name="N/A";
+        }
         UserDetail::create([
             'first_name' => $request->firstname,
             'middle_name' => $request->middlename,
             'last_name' => $request->lastname,
             'birth_date' => $request->birthdate,
             'land_line_number' => $request->landline,
-            'mobile_number' => $request->mobile,
+            'mobile_number' => $request->mobile_number,
             'home_address' =>$request->home_adress,
             'shipping_address' => $request->shipping_adress,
             'facebook_name' =>$request->facebook_name,

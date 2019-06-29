@@ -112,7 +112,7 @@ return [
         [
             'text'       => 'Show all User list',
             'url'        => '/all_users',
-            'icon' => 'file',
+            'icon'       => 'user',
         ],
         // [
         //     'text'        => 'Pages',
@@ -121,30 +121,35 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
+        // 'ACCOUNT SETTINGS',
+        // [
+        //     'text' => 'Profile',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'user',
+        // ],
+        // [
+        //     'text' => 'Change Password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'lock',
+        // ],
+        // [
+        //     'text'    => 'Multilevel',
+        //     'icon'    => 'share',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Level One',
+        //             'url'  => '#',
+        //         ],
 
-            ],
-        ],
-        'LABELS',
+        //     ],
+        // ],
+        // 'LABELS',
 
+        [
+            'text'       => 'Items List',
+            'url'        => '/all_items',
+            'icon_color' => 'orange',
+        ],
         [
             'text'       => 'Upload Item Price list',
             'url'        => '/add_item',

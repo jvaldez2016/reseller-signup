@@ -20,13 +20,13 @@ class CreateBusinessInformationTable extends Migration
             $table->string('existing_business')->nullable();
             $table->string('existing_business_address')->nullable();
             $table->string('dti_number')->nullable();
-            $table->string('tin_number');
+            $table->string('tin_number')->nullable();
             $table->boolean('facebook');
             $table->boolean('instagram');
             $table->boolean('lazada');
             $table->boolean('shopee');
             $table->boolean('personalcontacts');
-            $table->boolean('existingbusiness');
+            $table->boolean('existingbusiness')->nullable();
             $table->string('others')->nullable();
             $table->string('facebook_business_account')->nullable();
             $table->string('facebook_business_url')->nullable();

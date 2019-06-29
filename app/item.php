@@ -14,4 +14,9 @@ class item extends Model
         'distributor',
         'mega_distributor'
     ];
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
 }

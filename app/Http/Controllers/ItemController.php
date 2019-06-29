@@ -21,8 +21,15 @@ class ItemController extends Controller
 
     public function index()
     {
-        $result=Item::all();
-        dd($result);
+
+        return view('auth.show-all-items');
+    }
+
+    /**Ajax data for ALl item */
+    public function allItemsData()
+    {
+          $users=item::all();
+    return datatables()->of($users)->toJson();
     }
 
     /**
@@ -61,9 +68,11 @@ class ItemController extends Controller
      * @param  \App\item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(item $item)
+    public function show($item)
     {
+        $result=Item::find($item);
 
+        return view('auth.show-item',compact('result'));
     }
 
     /**
@@ -74,6 +83,7 @@ class ItemController extends Controller
      */
     public function edit(item $item)
     {
+
         return view('auth.updateform');
     }
 

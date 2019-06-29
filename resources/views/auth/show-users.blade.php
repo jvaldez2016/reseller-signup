@@ -18,6 +18,7 @@
                 <th>Finished Registration</th>
                 <th>Created At</th>
                 <th>Updated At</th>
+                <th></th>
             </tr>
         </thead>
     </table>
