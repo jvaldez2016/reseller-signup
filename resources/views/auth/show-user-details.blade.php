@@ -83,14 +83,28 @@
                 </thead>
                  <tbody>
                      <tr>
-                        <td>{{$user->userBusinessInformation->existing_business}}</td>
+                         @if ($user->userBusinessInformation->existing_business)
+                         <td>{{$user->userBusinessInformation->existing_business}}</td>
+                         @else
+                             <td></td>
+                         @endif
+
                         @if(isset($user->userBusinessInformation->existing_business_address))
                             <td>{{$user->userBusinessInformation->existing_business_address}}</td>
                         @else
                             <td></td>
                         @endif
+                        @if ($user->userBusinessInformation->dti_number)
                         <td>{{$user->userBusinessInformation->dti_number}}</td>
+                        @else
+                            <td></td>
+                        @endif
+                        @if ($user->userBusinessInformation->tin_number)
                         <td>{{$user->userBusinessInformation->tin_number}}</td>
+                        @else
+                            <td></td>
+                        @endif
+
                      </tr>
                 </tbody>
         </table>
@@ -105,10 +119,28 @@
                 </thead>
                 <tbody>
                     <tr>
+                        @if ($user->userBusinessInformation->facebook_business_account)
                         <td>{{$user->userBusinessInformation->facebook_business_account}}</td>
+                        @else
+                            <td></td>
+                        @endif
+                        @if ($user->userBusinessInformation->facebook_business_url)
                         <td>{{$user->userBusinessInformation->facebook_business_url}}</td>
+                        @else
+                            <td></td>
+                        @endif
+
+                        @if ($user->userBusinessInformation->instragram_business_account)
                         <td>{{$user->userBusinessInformation->instragram_business_account}}</td>
-                        <td>{{$user->userBusinessInformation->lazada_account}}</td>
+                        @else
+                           <td></td>
+                        @endif
+                       @if ($user->userBusinessInformation->lazada_account)
+                       <td>{{$user->userBusinessInformation->lazada_account}}</td>
+                       @else
+                           <td></td>
+                       @endif
+
                     </tr>
                 </tbody>
         </table>
