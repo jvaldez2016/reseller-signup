@@ -86,7 +86,9 @@
                          @if ($user->userBusinessInformation->existing_business)
                          <td>{{$user->userBusinessInformation->existing_business}}</td>
                          @else
-                             <td></td>
+                             <td>
+
+                             </td>
                          @endif
 
                         @if(isset($user->userBusinessInformation->existing_business_address))
@@ -150,7 +152,12 @@
                 </thead>
                 <tbody>
                     <tr>
+                        @if ($user->userBusinessInformation->shopee_account)
                         <td>{{$user->userBusinessInformation->shopee_account}}</td>
+                        @else
+                            <td></td>
+                        @endif
+
                     </tr>
                 </tbody>
         </table>
