@@ -45,6 +45,6 @@ class User extends Authenticatable
 
     public function userBusinessInformation()
     {
-        return $this->hasOne(BusinessInformation::class);
+        return $this->hasOne(businessInformation::class);
     }
 }
